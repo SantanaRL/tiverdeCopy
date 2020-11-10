@@ -34,6 +34,9 @@ div#texto{
     width: 800px;
     text-align: justify;
     padding: 5px;
+    background-color: #000000c4;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
 }
 div#texto img{
     display: block;
@@ -91,4 +94,5 @@ ul#suma li:hover{
 }
 body{
     font-family: Verdana, Tahoma, sans-serif;
+    background-image: url('imgs/placaM.jpeg');
 }
