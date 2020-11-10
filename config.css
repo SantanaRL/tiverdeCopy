@@ -6,15 +6,25 @@ header{
     margin-right: -10px;
     padding-top: 5px;
     text-align: center;
-    
+    position: sticky;
+    top:0
 }
 header img{
     width: 50px;
 }
-h1{
+header h1{
     color:#5dff4f ;
     margin:  5px auto ;
+}
+h1{   
     font-size: 50px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
 }
 
 div#texto{
