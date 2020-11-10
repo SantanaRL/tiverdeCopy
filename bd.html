@@ -18,9 +18,10 @@
         <ul id="suma">
             <a href="#anc"><li>conceitos</li></a>
             <a href="#mod"><li>modelagem</li></a>
+            <a href="#proj"><li>projeto</li></a>
         </ul>
     </header>
-    
+
     <h2 id="anc" style="visibility: hidden;">anc</h2>
     <div id=texto>
 
@@ -64,6 +65,124 @@
             <li>3.	Física: demonstra os dados fisicamente e leva em consideração todas as regras e limitações do banco de dados. Obedece padrões e validações. E a partir daqui que o modelo deve estar espelhado para o seu banco de dados final.</li>
         </ol>
         <p>Embora Modelo Lógicos e Modelos Físico parecerem similares, e eles de fato são, o nível de detalhes que eles modelam pode ser significativamente diferente. Isso porque o objetivo de cada diagrama é diferente – podemos usar um Modelo Lógicos para explorar conceitos do domínio com os envolvidos no projeto e Modelos Físico para definir o projeto do banco de dados.</p>
+        <h3> Modelagem Transacional e Informacional </h3>
+        <p> Os transacionais são aqueles projetados para atender à sistemas transacionais, ou seja, que tenham foco nos dados provenientes de interações de um sistema informatizado com suas fontes de dados. Ela prima armazenar e recuperar os dados referentes às transações. A preocupação nesse caso é com a normalização dos atributos, útil ao processamento de informações imediatas e não ao gerenciamento e tomada de decisões.</p>
+        <p> Por outro lado, a modelagem informacional – ou dimensional – tem objetivo oposto, ela visa atender a necessidade da tomada de decisão e para isso se baseia em grandes volumes de dados da base transacional. Nesse caso, o histórico é essencial e necessita de muita armazenagem.</p>
+        <h3> Sistemas Cliente-Servidor </h3>
+        <p>Na modelagem de dados também é importante saber sobre a estrutura fundamental dos sistemas, que normalmente são Cliente-Servidor, e consiste em estações de trabalho conectadas via rede aos servidores. Essas estações oferecem interfaces apropriadas para uso dos servidores, bem como processamento para aplicações.</p>
+        <p> Já no sistema cliente-servidor de três camadas, a indicação é para web, já que possui uma cada intermediária entre o cliente e o servidor de banco de dados. Essa camada é o servidor de aplicações ou servidor web e pode armazenar regras de negócio para acessar os dados do servidor.</p>
+        <h3> Fundamentos </h3>
+        <p>Certos conceitos são utilizados na modelagem conceitual para descrever os papéis de cada componente do domínio analisado. Dentre eles, podemos citar:</p>
+        <ul>
+          <li><b>Instância:</b> denomina uma ocorrência, um registro que existe ou passou a existir de uma entidade;</li>
+          <br>
+          <li><b>Entidade:</b> define qualquer coisa que seja identificável, singular e tenha existência bem delimitada;</li>
+          <br>
+          <li><b>Atributo:</b> é usado para referir-se à cada característica possuída pelas instâncias de uma entidade ou de um relacionamento e sua representação no DER se dá em forma de balões;</li>
+          <br>
+          <li><b>Relacionamento:</b> descreve um evento significativo que ocorre entre instâncias de duas entidades e é representado por um losango;</li>
+          <br>
+          <li><b>Cardinalidade:</b> conceito usado para dizer quantas vezes uma instância de uma entidade pode se relacionar com instâncias de outra entidade, também referenciado como “grau de relacionamento”;</li>
+          <br>
+          <li><b>Condicionalidade:</b> responsável por comunicar se a existência de uma instância de uma entidade está condicionada à existência de uma instância de outra entidade.</li>
+          <br>
+        </ul>
+          <h3>Relacionamentos entre instâncias de entidades</h3>
+            <p>São comumente efetivados com estas 3 cardinalidades:</p>
+            <ul>
+              <li><b>“Um” para “Um” (1:1):</b> uma instância de uma entidade pode ou deve se relacionar com uma e apenas uma instância de outra entidade;</li>
+              <br>
+              <li><b>“Um” para “Muitos” (1:N):</b> uma instância de uma entidade pode ou deve se relacionar com uma ou mais instâncias de outra entidade — é com toda certeza a cardinalidade mais encontrada em bancos de dados; </li>
+              <br>
+              <li><b>“Muitos” para “Muitos” (N:N):</b> uma ou mais instâncias de uma entidade podem ou devem se relacionar com uma ou mais instâncias de outra entidade — esse tipo de relacionamento transforma-se em uma entidade a partir da modelagem lógica.</li>
+              <br>
+            </ul>
+            <h3> Condição de relacionamentos </h3>
+            <p> Podem ser regidos sob 2 condicionalidades (exemplificadas abaixo): </p>
+            <ul>
+              <li><b>Parcial:</b> quando instâncias de uma entidade Telefone podem estar relacionadas com instâncias de Pessoa em uma agenda, ou seja, onde o cadastro de números de telefone sem nome é permitido;</li>
+              <br>
+              <li><b>Total:</b> quando instâncias de uma entidade Carro devem estar relacionadas com instâncias de Cliente para entrar em uma oficina, ou seja, onde o cadastro de carros sem dono é proibido.</li>
+              <br>
+            </ul>
+              <h3>Entidades de uma relação 1:N</h3>
+              <p>Duas categorias são usadas para defini-las:</p>
+              <ul>
+                <li> <b>“Fortes”:</b> para entidades do lado 1 da relação; </li>
+                <br>
+                <li> <b>“Fracas”:</b> para entidades do lado N.</li>
+                <br>
+              </ul>
+              <h2 id="proj">Projeto de Banco de Dados</h2>
+              <p>O projeto de banco de dados é fundamental para o sucesso na implementação da tecnologia de banco de dados em uma empresa. Para pequenos sistemas muitas vezes o responsável pelo projeto parte diretamente para a criação do banco de dados físico e em seguida a criação das tabelas, colunas e índices. Porém quando se pensa em um banco de dados para uma empresa grande, dependendo do tamanho do projeto é fundamental um bom processo de projeto de banco de dados para que se possa garantir que o usuário terá todos os seus requisitos de informação atendidos na forma de informações disponíveis no banco de dados, além de outras considerações já vistas anteriormente tais como disponibilidade, desempenho e confiabilidade do banco de dados.</p>
+              <p>Um projeto de banco de dados é caracterizado por um processo que possui fases distintas e com aspectos diferentes, mas que tem como objetivo final a implementação de um banco de dados que atenda às necessidades de informação do usuário e aos requisitos não funcionais de disponibilidade, desempenho e confiabilidade esperados.</p>
+              <p>As Três fases que fazem parte de um projeto de banco de dados:</p>
+              <ol>
+                <li><b>Modelo conceitual</b> – Representa os conceitos do negócio e as associações existentes entre estes conceitos. Também são representados os atributos assim como as regras de negócio que regulam as associações e conceitos do negócio. Este modelo é independente da tecnologia de implementação usada para o banco de dados e por isto é a etapa mais adequada para o envolvimento do usuário que não precisa ter conhecimentos técnicos. As características principais deste modelo são:</li>
+                <br>
+                <ul>
+                  <li>Visão Geral do negócio;</li>
+                  <br>
+                  <li>Facilidade de entendimento entre usuários e desenvolvedores;</li>
+                  <br>
+                  <li>Possui somente as entidades, relacionamentos e atributos principais;</li>
+                </ul>
+                <p> Os principais produtos da fase de projeto conceitual são:</p>
+                <ul>
+                  <li>O diagrama de entidade e relacionamentos, também conhecido por modelo de entidade relacionamentos;</li>
+                  <br>
+                  <li>Lista de Regras de Restrição de Integridade.</li>
+                  <br>
+                </ul>
+                <li> <b>Modelo Lógico</b> – Representa as estruturas de dados a serem implementadas e suas características considerando os limites impostos pelo modelo de dados usado para implementação do banco de dados. (banco de dados hierárquico, banco de dados de rede, banco de dados relacional etc.). As características principais deste modelo são:</li>
+                <br>
+                <ul>
+                  <li>É derivado do modelo conceitual</li>
+                  <br>
+                  <li>Possui entidades associativas em lugar de relacionamentos n:m</li>
+                  <br>
+                  <li>Define as chaves primárias das entidades</li>
+                  <br>
+                  <li>Define as chaves estrangeiras entre as entidades</li>
+                  <br>
+                  <li>Normalização até a 3° forma normal</li>
+                  <br>
+                  <li>Adequado ao padrão de nomenclatura adotado pela empresa</li>
+                  <br>
+                  <li>As Entidades e atributos são documentados em um Dicionário de Dados</li>
+                </ul>
+                <br>
+                <p>O principal produto da fase de projeto lógico é o modelo relacional.</p>
+                <br>
+                <li><b>Modelo Físico</b> – Este modelo representa a implementação do modelo lógico considerando algum tipo particular de tecnologia de banco de dados e os requisitos não funcionais (desempenho, disponibilidade, segurança) que foram identificados pelo analista de requisitos. As características principais deste modelo são:</li>
+                <br>
+                <ul>
+                  <li>Elaborado a partir do modelo lógico;</li>
+                  <br>
+                  <li>Pode variar segundo a tecnologia usada para implementação do banco de dados;</li>
+                  <br>
+                  <li>Possui tabelas físicas (log, líder etc.);</li>
+                  <br>
+                  <li>Possui colunas físicas (replicação);</li>
+                  <br>
+                  <p>No modelo físico, a linguagem SQL (Structured Query Language), é a linguagem padrão para definição, manipulação e controle de uso das estruturas de dados.</p>
+                  <p>Existem muitos Sistemas Gerenciadores de Banco de Dados disponíveis no mercado. Como exemplo, podemos citar o PostgreSQL e o MySQL, que tem código aberto e são gratuitos. Também existe o Oracle, DB2, Sybase SQL Server, Informix e Microsoft SQL Server, que são pagos e não possuem código aberto, sendo bastante usados em corporações.</p>
+                </ol>
+                <h3>Etapas no projeto de um Banco de dados:</h3>
+                <br>
+                <ul>
+                  <li>Determinar qual o objetivo do projeto de Banco de Dados: Isto ajuda na determinação de quais os dados devem ser armazenados. É fundamental ter bem claro qual o objetivo a ser alcançado com o banco de dados. É fazer o acompanhamento das despesas, pedidos dos clientes, multas de trânsito, a evolução das vendas ou outro objetivo qualquer. </li>
+                  <br>
+                  <li>Determinar as Entidades necessárias: Após definirmos os objetivos do Banco de Dados, as informações devem ser definidas e separadas em assuntos diferentes, tais como "Clientes", "Empregados", "Pedidos", pois cada um irá compor uma tabela no banco de dados. É importante considerar que conceitos diferentes devem ser representados como entidades e relacionamentos diferentes. Isto significa que não devemos misturar conceitos, assuntos, representando todos como apenas uma única entidade.</li>
+                  <br>
+                  <li>Determinar os Atributos de cada Entidade: Definir quais informações devem ser mantidas em cada entidade. Por exemplo, a entidade Clientes poderia ter um atributo para o CPF Do Cliente, outro para o Nome Do Cliente e assim por diante. </li>
+                  <br>
+                  <li>Determinar o identificador de cada Entidade: Determinar, em cada entidade, qual(is) atributo(s) será(ão) utilizado(s) como identificador de cada ocorrência na entidade. </li>
+                  <br>
+                  <li>Determinar os Relacionamentos: Determinar as associações existentes entre as entidades do modelo de dados, identificando de que forma as entidades se relacionam, e representando os relacionamentos entre as entidades, detalhando a cardinalidade entre os relacionamentos. A cardinalidade especifica o número de vezes que uma ocorrência de uma entidade pode estar associada a ocorrências da outra entidade. Por exemplo, Clientes podem Fazer Vários Pedidos, então existe um relacionamento do tipo Um-para-vários entre a tabela Clientes (lado um) e a tabela Pedidos (lado vários). </li>
+                  <br>
+                  <li>Normalizar a Estrutura do Banco de Dados: Antes de inserir muitos dados, ou até mesmo antes de inserir qualquer dado, verificar se a estrutura contém redundância de atributos nas entidades, eliminando a possibilidade de inconsistência nos dados causada por anomalias de atualização devido a redundância de atributos. Isto, normalmente, pode ser obtido através do processo de Normalização.</li>
+
     </div>
 </body>
-</html>
+</html
