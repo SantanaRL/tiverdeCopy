@@ -1,5 +1,5 @@
 header{
-    height: 125px;
+    height: 75px;
     background-color: #1C1C1C;
     margin-top: -10px;
     margin-left: -10px;
@@ -10,14 +10,14 @@ header{
     top:0
 }
 header img{
-    width: 50px;
+    width: 43px;
 }
 header h1{
     color:#5dff4f ;
-    margin:  5px auto ;
+    margin:  0px auto ;
 }
 h1{   
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
 }
 h2{
@@ -53,14 +53,41 @@ ul#menu li{
     
     background-color:#a0a0a0 ;
     text-align: center;
-    width: 135px;
-    padding: 10px;
+    width: 120px;
+    padding: 3px 8px;
     color: #ffffff;
+    font-size:15px ;
 }
 
 ul#menu li:hover{
     background-color:#6d6d6d ;
     color: #5dff4f;
+}
+ul#suma{
+
+    display: table;
+    margin: 0 0;
+    list-style-type: none;
+    padding: 0 0;
+    
+}
+ul#suma a{
+    text-decoration: none;
+}
+ul#suma li{
+    display: block;
+    background-color: #5dff4f ;
+    color: #000000;
+    text-align: center;
+    width: 150px;
+    padding: 10px 8px;
+    font-size:15px ;
+    
+}
+
+ul#suma li:hover{
+    background-color:#33b328 ;
+
 }
 body{
     font-family: Verdana, Tahoma, sans-serif;

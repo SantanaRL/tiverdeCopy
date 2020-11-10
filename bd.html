@@ -15,11 +15,16 @@
             <a href="bd.html"><li>Banco de dados</li></a>
             <a href="form.html"><li>Formulário</li></a>
         </ul>
+        <ul id="suma">
+            <a href="#anc"><li>conceitos</li></a>
+            <a href="#mod"><li>modelagem</li></a>
+        </ul>
     </header>
     
-    <div id="suma"></div>
+    <h2 id="anc" style="visibility: hidden;">anc</h2>
     <div id=texto>
-        <h2> Conceitos sobre Banco de Dados</h2>
+
+        <h2 id="conc"> Conceitos sobre Banco de Dados</h2>
         <ul>
             <li>Dado: fato do mundo real que está registrado </li>
             exemplos: endereço, data, nome etc.
@@ -49,7 +54,7 @@
         <p>O modelo conceitual é a descrição do BD de maneira independente ao SGBD, ou seja, define quais os dados que aparecerão no BD, mas sem se importar com a implementação que se dará ao BD. Desta forma, há uma abstração em nível de SGBD. Uma das técnicas mais utilizadas dentre os profissionais da área é a abordagem entidade-relacionamento (ER), onde o modelo é representado graficamente através do diagrama entidade-relacionamento (DER).</p>
         <img src="imgs/der1.jpg" alt="Exemplo DER" width="600px"/>
         <p>O modelo lógico descreve o BD no nível do SGBD, ou seja, depende do tipo particular de SGBD que será usado. Não podemos confundir com o Software que será usado. O tipo de SGBD que o modelo lógico trata é se ele é relacional, orientado a objetos, hierárquico etc. O SGBD relacional é o mais conhecido. Nele, os dados são organizados em tabelas.</p>
-        <h2>Modelagem de dados</h2>
+        <h2 id="mod">Modelagem de dados</h2>
         <p>Os modelos de dados são ferramentas que permitem demonstrar como serão construídas as estruturas de dados que darão suporte aos processos de negócios, como os dados estarão organizados e quais os relacionamentos que pretendemos estabelecer entre eles.</p>
         <p>Os principais objetivos da modelagem de dados são: representar o ambiente observado, documentar e normalizar, fornecer processos de validação e observar processos de relacionamentos entre objetos.</p>
         <h3>Esses modelos consistem em 3 perspectivas:</h3>
