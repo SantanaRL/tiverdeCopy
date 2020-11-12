@@ -1,6 +1,6 @@
 header{
-    height: 70px;
-    background-color: #1C1C1C;
+    height: 90px;
+    background-color: #000000c4;
     margin-top: -10px;
     margin-left: -10px;
     margin-right: -10px;
@@ -16,18 +16,25 @@ header h1{
     color:#5dff4f ;
     margin:  0px auto ;
 }
-h1{   
-    font-size: 37px;
+h1{
+    font-size: 50px;
     text-align: center;
+    font-family: Fantasy, Tahoma, sans-serif;
 }
 h2{
+  font-size: 30px;
     text-align: center;
+    font-family: Cambria, Tahoma, sans-serif;
 }
 h3{
+  font-size: 25px;
     text-align: center;
+    font-family: Cambria, Tahoma, sans-serif;
 }
 h4{
+  font-size: 20px;
    text-align: center;
+
 }
 table{
        margin:auto;
@@ -55,17 +62,17 @@ ul#menu{
     display: table;
     margin: 0 auto;
     text-align: center;
-    
 }
 ul#menu li{
     display: inline-block;
-    
+
     background-color:#a0a0a0 ;
     text-align: center;
     width: 120px;
     padding: 3px 8px;
     color: #ffffff;
     font-size:15px ;
+    border: 1px solid #6d6d6d;
 }
 
 ul#menu li:hover{
@@ -78,20 +85,22 @@ ul#suma{
     margin: 0 0;
     list-style-type: none;
     padding: 0 0;
-    
+
 }
 ul#suma a{
     text-decoration: none;
 }
 ul#suma li{
     display: block;
-    background-color: #5dff4f ;
-    color: #000000;
+    background-color: #32CD32 ;
+    color: #1C1C1C;
     text-align: center;
     width: 150px;
     padding: 10px 8px;
     font-size:15px ;
-    
+    font-family: Candara, Tahoma, sans-serif;
+    border-radius: 0  15px  15px 0;
+    border: 1px solid #33b328;
 }
 
 ul#suma li:hover{
@@ -99,6 +108,7 @@ ul#suma li:hover{
 
 }
 body{
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: Calibri, Tahoma, sans-serif;
     background-image: url('imgs/placaM.jpeg');
+    font-size:17px;
 }
