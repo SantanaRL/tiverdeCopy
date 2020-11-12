@@ -26,6 +26,12 @@ h2{
 h3{
     text-align: center;
 }
+h4{
+   text-align: center;
+}
+table{
+       margin:auto;
+}
 
 div#texto{
     margin-top: 50px;
